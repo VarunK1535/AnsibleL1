@@ -1,0 +1,11 @@
+---
+- name: "This playbook creates a new user using variables"
+  hosts: all
+  become: true
+  vars:
+    cuser: ben
+  tasks:
+  - name: "create a new user"
+    user:
+     name: "{{ cuser }}"
+

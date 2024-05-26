@@ -1,0 +1,10 @@
+---
+- name: "This playbook copies file to target systems"
+  hosts: all
+  become: true
+  tasks:
+  - name: "copy files"
+    copy:
+      src: /opt/ansible/index.html
+      dest: /var/www/html
+      mode: 0666

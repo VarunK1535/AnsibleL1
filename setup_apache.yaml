@@ -1,0 +1,6 @@
+---
+- name: "ansible playbook to install httpd on rhel or apache2 on debian and to start services"
+  hosts: all
+  become: true
+  roles:
+    - setup-apache

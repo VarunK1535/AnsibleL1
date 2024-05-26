@@ -1,0 +1,10 @@
+---
+- name: "This playbook doesn't gather facts"
+  hosts: all
+  become: true
+    # gather_facts: no
+  tasks:
+  - name: "Create a directory"
+    file:
+       path: /home/ansible/gfn
+       state: directory

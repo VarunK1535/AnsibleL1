@@ -1,0 +1,9 @@
+---
+- name: "This playbook will create user on specified hosts"
+  hosts: all
+  become: true
+
+  tasks:
+  - name: "Creating user Razor"
+    user:
+      name: Razor

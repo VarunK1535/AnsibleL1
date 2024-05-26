@@ -1,0 +1,11 @@
+---
+- name: "This playbook creates new user"
+  hosts: all
+  become: true
+  vars_files:
+  - ufeed.yml
+  tasks:
+  - name: " create new user"
+    user: 
+      name: "{{ user }}"
+

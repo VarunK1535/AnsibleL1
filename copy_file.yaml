@@ -1,0 +1,11 @@
+---
+- name: "This playbook copies file from control node to managed nodes"
+  hosts: all
+  become: true
+  tasks:
+  - name: "copy module usage"
+    copy:
+      src: /opt/ansible/index.html
+      dest: /home/ansadmin
+      mode: 0600
+      owner: Tbone

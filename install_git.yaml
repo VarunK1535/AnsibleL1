@@ -1,0 +1,16 @@
+---
+- name: "ansible playbook to install git packages"
+  hosts: all
+  become: true
+  tasks:
+  - name: "install git packages"
+    yum:
+      name: git
+      state: installed
+    when: ansible_os_family == "RedHat"
+
+  - name: "install git packages on debian"
+    apt:
+      name: git
+      state: present
+    when: ansible_os_family == "Debian"

@@ -1,0 +1,13 @@
+---
+- name: "This playbook stops httpd service and uninstalls httpd service"
+  hosts: anstar
+  become: true
+  tasks:
+  - name: "Stop httpd service"
+    service:
+      name: httpd
+      state: stopped
+  - name: "Uninstall httpd service"
+    yum:
+      name: httpd
+      state: removed
